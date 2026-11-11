@@ -1,0 +1,42 @@
+:root {
+  --ejs-ink: #1f2328;
+  --ejs-muted: #59636e;
+  --ejs-line: #d1d9e0;
+  --ejs-surface: #ffffff;
+  --ejs-accent: #0969da;
+  --ejs-danger: #d1242f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ejs-ink: #f0f6fc;
+    --ejs-muted: #9198a1;
+    --ejs-line: #3d444d;
+    --ejs-surface: #0d1117;
+    --ejs-accent: #4493f8;
+    --ejs-danger: #f85149;
+  }
+}
+.ejs-faq { color: var(--ejs-ink); }
+.ejs-faq-btn {
+  font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-faq-btn:hover:not(:disabled) { border-color: var(--ejs-accent); }
+.ejs-faq-btn:disabled { opacity: 0.5; cursor: default; }
+.ejs-faq-input {
+  font: inherit; width: 100%; box-sizing: border-box; padding: 6px 8px; border-radius: 6px;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-faq-input[aria-invalid='true'] { border-color: var(--ejs-danger); }
+.ejs-faq-label { display: block; font-size: 12px; color: var(--ejs-muted); margin-top: 8px; }
+.ejs-faq-label .ejs-faq-input { margin-top: 3px; }
+.ejs-faq-error { color: var(--ejs-danger); font-size: 13px; min-height: 0; }
+.ejs-faq-field { display: flex; flex-direction: column; gap: 6px; }
+.ejs-faq-img { max-width: 100%; max-height: 320px; object-fit: contain; border-radius: 6px; background: var(--ejs-line); align-self: flex-start; }
+.ejs-faq-empty { padding: 24px; text-align: center; color: var(--ejs-muted); border: 1px dashed var(--ejs-line); border-radius: 6px; }
+.ejs-faq-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+.ejs-faq-text { min-height: 1.4em; outline: none; padding: 6px 8px; border: 1px solid var(--ejs-line); border-radius: 6px; background: var(--ejs-surface); }
+.ejs-faq-text:empty::before { content: attr(data-placeholder); color: var(--ejs-muted); }
+.ejs-faq { display: flex; flex-direction: column; gap: 10px; }
+.ejs-faq-row { display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 1px solid var(--ejs-line); border-radius: 8px; }
+.ejs-faq-btn { align-self: flex-start; }
